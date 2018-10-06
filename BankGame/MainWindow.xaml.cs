@@ -58,8 +58,12 @@ namespace BankGame
 
         private void Button_AddCardToBank_Click(object sender, RoutedEventArgs e)
         {
-            Card card = (Card)ListBox_AvailableCards.SelectedItem;
-            card.initialApply();
+            var obj = ListBox_AvailableCards.SelectedItem;
+            if (obj != null)
+            {
+                Card card = (Card)ListBox_AvailableCards.SelectedItem;
+                card.initialApply();
+            }
         }
     }
 }
